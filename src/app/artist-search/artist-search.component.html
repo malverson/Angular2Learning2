@@ -1,0 +1,33 @@
+<!--component html goes here -->
+<form [formGroup]="form">
+    <label for="search">Artist Search</label>
+    <input id="search" class="form-control" type="text" formControlName="search">
+    <div *ngIf="artists">
+        <table class="table table-striped  table-responsive">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Image</th>
+                    <th>Genres</th>
+                    <th>Popularity</th>
+                    <th>Followers</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let artist of artists;">
+                    <td>{{artist.name}}</td>
+                    <td><div *ngFor="let imgUrl of artist.images; let isFirst = first"><img *ngIf="isFirst" src="{{imgUrl.url}}" width="200px"/></div></td>
+                    <td><ul *ngFor="let genre of artist.genres"><li>{{genre}}</li></ul></td>
+                    <td>
+                        <span class="glyphicon glyphicon-headphones" [class.highlighted]="artist.popularity>=10"></span>
+                        <span class="glyphicon glyphicon-headphones" [class.highlighted]="artist.popularity>=30"></span>
+                        <span class="glyphicon glyphicon-headphones" [class.highlighted]="artist.popularity>=50"></span>
+                        <span class="glyphicon glyphicon-headphones" [class.highlighted]="artist.popularity>=70"></span>
+                        <span class="glyphicon glyphicon-headphones" [class.highlighted]="artist.popularity>=90"></span>
+                    </td>
+                    <td>{{artist.followers.total}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</form>	

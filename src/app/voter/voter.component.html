@@ -1,0 +1,14 @@
+<!--component html goes here -->
+<div class="voter">
+    <i 
+        class="glyphicon glyphicon-menu-up vote-button"
+        [class.highlighted]="myVote==1"
+        (click)="onUpClick()">
+    </i>
+    <span> {{ voteCount + myVote }} </span>
+    <i 
+        class="glyphicon glyphicon-menu-down vote-button"
+        [class.highlighted]="myVote==-1"
+        (click)="onDownClick()">
+    </i>
+</div>

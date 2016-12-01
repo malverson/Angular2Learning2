@@ -1,0 +1,16 @@
+<!--component html goes here -->
+
+
+<div class="thumbnail rowheight">
+    <img src="{{ data.imageUrl }}" alt="{{ data.body }}">
+    <voter [voteCount]="post.voteCount" 
+       [myVote]="post.myVote"
+       (vote)="onVote($event)">
+    </voter>
+    <div class="caption">
+        <h3>{{ data.title }}</h3>
+        <p>{{ data.body }}.</p>
+    </div>
+    <div class="like"><like-heart [totalLikes]="data.totalLikes" [iLike]="data.iLike"></like-heart>
+    </div>
+</div>
