@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { GalleryComponent } from './gallery/gallery.component';
 import { AppComponent } from './app.component';
@@ -18,11 +19,13 @@ import { routing } from './app.routing';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { FooterComponent } from './footer/footer.component';
+import { ArtistRatingComponent } from './artist-rating/artist-rating.component';
+import { NavBarDropdownComponent } from './nav-bar-dropdown/nav-bar-dropdown.component';
 
 @NgModule({ 
   declarations: [
     AppComponent, GalleryComponent, LikeHeartComponent, VoterComponent, ImagesComponent, 
-    ImageComponent, ZippyComponent, SignupFormComponent, ArtistSearchComponent, NavbarComponent, SidebarComponent, BreadcrumbsComponent, FooterComponent
+    ImageComponent, ZippyComponent, SignupFormComponent, ArtistSearchComponent, NavbarComponent, SidebarComponent, BreadcrumbsComponent, FooterComponent, ArtistRatingComponent, NavBarDropdownComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,8 @@ import { FooterComponent } from './footer/footer.component';
     ReactiveFormsModule,
     HttpModule,
     JsonpModule,
-    routing
+    routing,
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

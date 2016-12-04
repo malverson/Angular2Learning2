@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ImageService } from './gallery/image/image.service';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-root',

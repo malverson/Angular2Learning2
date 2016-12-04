@@ -1,19 +1,12 @@
-<body>
-  <navbar></navbar>
-  <div class="container-fluid-full">
-    <div class="row-fluid">
-        <app-sidebar></app-sidebar>
-        <!-- start: Content -->
-        <div id="content" class="span10">
-          <app-breadcrumbs></app-breadcrumbs>
-          <div class="row-fluid">
-            <h1>
-              {{title}}
-            </h1>
-            <router-outlet></router-outlet>
-          </div><!--/.fluid-container-->
-      </div><!-- end: Content -->
-    </div><!--/#content.span10-->
-  </div><!--/fluid-row-->
-  <app-footer></app-footer>
-</body>
+<navbar></navbar>
+<app-breadcrumbs></app-breadcrumbs>
+  <div class="row-fluid">
+    <div class="col-sm-12">
+      <h1>
+        {{title}}
+      </h1>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+<app-footer></app-footer>
+

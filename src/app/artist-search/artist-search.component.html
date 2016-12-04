@@ -19,11 +19,7 @@
                     <td><div *ngFor="let imgUrl of artist.images; let isFirst = first"><img *ngIf="isFirst" src="{{imgUrl.url}}" width="200px"/></div></td>
                     <td><ul *ngFor="let genre of artist.genres"><li>{{genre}}</li></ul></td>
                     <td>
-                        <span class="glyphicon glyphicon-headphones" [class.highlighted]="artist.popularity>=10"></span>
-                        <span class="glyphicon glyphicon-headphones" [class.highlighted]="artist.popularity>=30"></span>
-                        <span class="glyphicon glyphicon-headphones" [class.highlighted]="artist.popularity>=50"></span>
-                        <span class="glyphicon glyphicon-headphones" [class.highlighted]="artist.popularity>=70"></span>
-                        <span class="glyphicon glyphicon-headphones" [class.highlighted]="artist.popularity>=90"></span>
+                        <app-artist-rating [currentRate]="artist.popularity/20"></app-artist-rating>
                     </td>
                     <td>{{artist.followers.total}}</td>
                 </tr>
