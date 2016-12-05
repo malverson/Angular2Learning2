@@ -21,11 +21,12 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { FooterComponent } from './footer/footer.component';
 import { ArtistRatingComponent } from './artist-rating/artist-rating.component';
 import { NavBarDropdownComponent } from './nav-bar-dropdown/nav-bar-dropdown.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({ 
   declarations: [
     AppComponent, GalleryComponent, LikeHeartComponent, VoterComponent, ImagesComponent, 
-    ImageComponent, ZippyComponent, SignupFormComponent, ArtistSearchComponent, NavbarComponent, SidebarComponent, BreadcrumbsComponent, FooterComponent, ArtistRatingComponent, NavBarDropdownComponent
+    ImageComponent, ZippyComponent, SignupFormComponent, ArtistSearchComponent, NavbarComponent, SidebarComponent, BreadcrumbsComponent, FooterComponent, ArtistRatingComponent, NavBarDropdownComponent, AboutComponent
   ],
   imports: [
     BrowserModule,

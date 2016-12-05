@@ -6,7 +6,7 @@ import { ImageComponent } from '../image/image.component';
     selector: 'images',
     template: `
         <div class="row">
-            <div class="col-sm-12 col-md-2" *ngFor="let image of images">
+            <div class="col-sm-12 col-md-3" *ngFor="let image of images">
                 <image [data]="image"></image>
             </div>
         </div>`,

@@ -48,6 +48,22 @@ export class ImageService {
             body: "Finding yourself will lead you home.",
             totalLikes: 1,
             iLike: true
+        },
+        { 
+            imageUrl: "http://lorempixel.com/300/200/nature?7",
+            title: "Winter",
+            handle: "@3rdwave",
+            body: "Finding yourself will lead you home.",
+            totalLikes: 1,
+            iLike: true
+        },
+        { 
+            imageUrl: "http://lorempixel.com/300/200/nature?8",
+            title: "Summertime",
+            handle: "@3rdwave",
+            body: "Finding yourself will lead you home.",
+            totalLikes: 1,
+            iLike: true
         }];
     }
 }

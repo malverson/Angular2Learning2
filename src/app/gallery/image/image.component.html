@@ -2,7 +2,7 @@
 
 
 <div class="thumbnail rowheight">
-    <img src="{{ data.imageUrl }}" alt="{{ data.body }}">
+    <img src="{{ data.imageUrl }}" alt="{{ data.body }}" class="rounded">
     <voter [voteCount]="post.voteCount" 
        [myVote]="post.myVote"
        (vote)="onVote($event)">
