@@ -6,9 +6,6 @@ import { Component, Input } from '@angular/core';
     styleUrls: ['./image.component.scss']
 })
 export class ImageComponent {
-    constructor() {
-        console.log(this.data);
-    }
     @Input() data;
     post = {
         voteCount: 7,
